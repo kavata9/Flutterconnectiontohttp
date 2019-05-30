@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'dart:async';
+import 'package:http/http.dart' as http;
 void main() => runApp(new MaterialApp(
   home: new HomePage(),
 ));
@@ -10,9 +11,23 @@ class HomePage extends StatefulWidget{
 }
 
 class HomePageState extends State<HomePage>{
+final String url = "https://swapi.co/api/people";
+
+List data;
+@override
+void initState() {
+    // TODO: implement initState
+    super.initState();
+    this.getJsonData();
+  }
+
+  Future<String>getJsonData() async{
+  var response = await http
+
+  }
+
 
   @override
-
   Widget build(BuildContext context) {
     // TODO: implement build
   return new Scaffold(
